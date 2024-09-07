@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(39, 43, 51);
+  height: 100%;
+  width: 100%;
+}
+
+.logo-image {
+  display: block;
+  margin: auto;
+  width: 38%;
+  position: relative;
+  top: 19px;
+}
+
+.pokemon-search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+
+.heading-ch {
+  margin: 34px auto 0px auto;
+  font-size: 35px;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+  color: rgb(251, 192, 45);
+  font-weight: 900;
+  font-family: tahoma;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  font-size: 162%;
+  color: white;
+  margin: 43px 5px;
+  font-family: tahoma;
+}
+
+input[type="text"] {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 275px;
+  border-bottom: 5px solid #020d35;
+  background: rgba(#e91e63, 0.2);
+  border-radius: 0.2em 0.2em 0 0;
+  padding: 6px;
+  font-size: medium;
+  color: #000;
+  -webkit-border-radius: 0.2em 0.2em 0 0;
+  margin: 43px 0px;
+}
+
+@media (max-width: 402px){
+    input[type="text"] {
+        width: 190px;
+    }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin: 0px 30px;
+  max-width: 100%;
+}
+
+@media (max-width: 1290px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 958px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heading-ch{
+    font-size: 25px;
+  }
+  .logo-image{ 
+    display: block;
+    margin: auto;
+    width: 38%;
+    position: relative;
+    top: 15px;
+  }
+
+}
+
+
+@media (max-width: 622px) {
+  .contaier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .heading-ch{
+    font-size: 23px;
+  }
+}
+
+
+@media (max-width: 544px){
+    .heading-ch{
+        font-size: 23px;
+      }
+      .logo-image{ 
+        display: block;
+      margin: auto;
+      width: 55%;
+      position: relative;
+      top: 15px;
+      }
+}
+
+@media (max-width: 402px){
+    .heading-ch{
+        font-size: 23px;
+      }
+      .logo-image{ 
+        display: block;
+      margin: auto;
+      width: 67%;
+      position: relative;
+      top: 15px;
+      }
+      .search{
+        font-size: 132%;
+        color: white;
+        margin: 47px 5px;
+        font-family: tahoma;
+    
+      }
+     
+}
+
+@media (max-width: 296px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+    width: 40px;
+  }
+  
+}
+
+.list-cards {
+  list-style: none;
+  width: 280px;
+}
+
+.upper-card {
+  width: 100%;
+  position: relative;
+  background-image: url(cardBc.png);
+  background-position: center center;
+  background-size: cover;
+  background-color: white;
+  min-height: 350px;
+  max-height: 350px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.images {
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  margin: 0px;
+  object-position: center center;
+  object-fit: contain;
+  z-index: 0;
+  transition: transform 0.6s;
+}
+
+.lower-card {
+  padding: 0.75rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  background-color: rgb(60, 62, 68);
+  flex-direction: column;
+}
+
+.images:hover {
+  transform: scale(1.2);
+}
+
+.ch-name {
+  font-size: 211%;
+  position: relative;
+  z-index: 1;
+  font-family: tahoma;
+}
+
+.gender {
+  display: flex;
+  justify-content: center;
+  margin: 11px 0px 9px;
+  font-size: 21px;
+  line-height: 1.8;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.00938em;
+  color: rgb(251, 192, 45);
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.font-bolt {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.values {
+  margin: 0px 0px 16px;
+  font-size: 19px;
+  line-height: 1.8;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.00938em;
+  color: rgb(251, 192, 45);
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: center;
+  color: white;
+  font-family: tahoma;
+}
+
+.heading-Res{ 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
